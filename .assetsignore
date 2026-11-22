@@ -1,8 +1,0 @@
-# Cloudflare Workers のアセットに含めないもの
-.git
-.git/**
-.gitignore
-wrangler.jsonc
-.wrangler
-node_modules
-README.md
