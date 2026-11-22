@@ -1,10 +1,12 @@
 {
   // Cloudflare Workers（静的アセット配信）
-  // リポジトリのルートにある index.html / digests / assets をそのまま配信する。
+  // public/ にサイト実体（index.html / digests / assets）を複製して配信する。
+  // リポジトリ直下を指定すると .git まで同梱される恐れがあるため、専用ディレクトリに隔離している。
+  // 公開スクリプト publish_ai_digest.py が public/ を毎回同期する。
   "name": "ai-news-digest",
   "compatibility_date": "2026-11-23",
   "assets": {
-    "directory": "./",
+    "directory": "./public",
     "not_found_handling": "404-page"
   }
 }
